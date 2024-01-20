@@ -24,6 +24,8 @@
     "./presets/*"
   ],
   "scripts": {
+    "docs": "typedoc-pkg --path packages --mono-repo --api-link esm",
+    "docs-sirv": "sirv docs --host",
     "prepare": "run-s --npm-path npm prepare:*",
     "prepare:patch": "ts-patch install -s",
     "prepare:hooks": "husky install",
@@ -36,6 +38,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
+    "@typhonjs-typedoc/typedoc-pkg": "^0.0.2",
     "@types/node": "^20.10.4",
     "copyfiles": "^2.4.1",
     "eslint": "^8.55.0",
@@ -44,11 +47,17 @@
     "npm-check-updates": "^16.14.11",
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.5",
+    "sirv-cli": "^2.0.2",
     "ts-patch": "^3.1.1",
     "tsx": "^4.6.2",
     "typescript": "^5.3.3"
   },
   "engines": {
     "node": ">=18.x"
+  },
+  "typedocOptions": {
+    "dmtLinksService": {
+      "GitHub": "https://github.com/squidfunk/mono"
+    }
   }
 }
