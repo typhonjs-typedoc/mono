@@ -21,6 +21,7 @@
   "type": "module",
   "main": "./dist/index.js",
   "bin": "./dist/_/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "./dist",
     "./typings"
